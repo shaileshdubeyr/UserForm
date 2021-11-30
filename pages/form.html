@@ -8,6 +8,7 @@
     <title>basic input types</title>
     <link rel="stylesheet" href="..\css\sampleform.css">
 </head>
+
 <body>
     <form>
         <header>
@@ -16,14 +17,14 @@
         <div>
             <label for="text">First Name</label>
             <input type="text" id="text" name="text">
-            <error-output class="text-error" for = "text"></error-output>   
+            <error-output class="text-error" for="text"></error-output>
         </div>
         <div>
             <label for="pwd">password</label>
             <input type="password" id="pwd" name="pwd">
         </div>
         <div>
-            <label for="email" >E-mail</label>
+            <label for="email">E-mail</label>
             <input type="email" id="email" name="email">
         </div>
         <div>
@@ -52,25 +53,25 @@
 
         <div>
             <label for="salary">Salary Limit</label>
-            <input type="range" name="salary" id="salary" min = "300000" max = "500000" step = "100" value="350000">
-            <output class="salary-output" for ="salary">400000</output>
+            <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="350000">
+            <output class="salary-output" for="salary">400000</output>
         </div>
         <div>
-            <button type="text" >Submit</button>
+            <button type="text">Submit</button>
         </div>
     </form>
     <script>
-            const name = document.querySelector("#text");
-            const error = document.querySelector(".text-error");
-            
-            name.addEventListener('input',  function(){
-                let regex = RegExp('^[a-z]{1}[a-z]{1,}$');
-                if(regex.test(name.value))
-                    text.textContent = "";
-                else
-                text.textContent = "the wrong entered charater";
-            });
+        const name = document.querySelector("#text");
+        const error = document.querySelector(".text-error");
 
+        name.addEventListener('input', function () {
+            let regex = RegExp('^[a-z]{1}[a-z]{1,}$');
+            if (regex.test(name.value))
+                text.textContent = "";
+            else
+                text.textContent = "the wrong entered charater";
+        });
     </script>
 </body>
+
 </html>
