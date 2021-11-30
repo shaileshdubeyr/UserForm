@@ -10,32 +10,33 @@
 </head>
 
 <body>
+
     <form>
         <header>
             <h1>HTML 5 Form Input Field</h1>
-            <script src = "..\js\userform.js"> </script>
         </header>
         <div>
             <label for="text">First Name</label>
-            <input type="text" id="text" name="text">
+            <input type="text" id="text" name="text" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
         <div>
-            <label for="pwd">password</label>
-            <input type="password" id="pwd" name="pwd">
+            <label for="pwd" >password</label>
+            <input type="password" id="pwd" name="pwd" required>
         </div>
         <div>
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email">
-            <error-output class="email-error" for = "email">
+            <error-output class="email-error" for="email"></error-output>
         </div>
         <div>
             <label for="url">Url</label>
             <input type="url" id="url" name="url">
         </div>
         <div>
-            <label for="number">First Name</label>
+            <label for="number">number</label>
             <input type="number" id="number" name="number">
+            <error-output class="number-error" for="number"></error-output>
         </div>
         <div>
             <label for="tel">tel input</label>
@@ -63,5 +64,5 @@
         </div>
     </form>
 </body>
-
+<script src="..\js\userform.js"> </script>
 </html>

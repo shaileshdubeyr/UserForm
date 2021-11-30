@@ -10,12 +10,23 @@ text.addEventListener('input', function () {
 });
 
 const email = document.querySelector("#email");
-const emailerror = Document.querySelector('.email-error')
+const emailerror = document.querySelector('.email-error')
 email.addEventListener('input', function () {
     let regex = RegExp('^[a-zA-Z0-9+_.-]+[@]{1}[a-zA-Z0-9]+[.a-z]{4}([.a-zA-Z]{3})*$');
     if (regex.test(email.value))
         emailerror.textContent = "";
     else
         emailerror.textContent = "Wrong email input";
+
+});
+
+const number = document.querySelector("#number");
+const numbererror = document.querySelector('.number-error')
+email.addEventListener('input', function () {
+    let regex = RegExp('^[0-9]{2}[ ][0-9]{10}$');
+    if (regex.test(number.value))
+        numbererror.textContent = "";
+    else
+        numbererror.textContent = "Wrong number input";
 
 });
