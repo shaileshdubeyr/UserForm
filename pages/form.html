@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic input types</title>
+    <link rel="stylesheet" href="..\css\sampleform.css">
+</head>
+<body>
+    <form>
+        <header>
+            <h1>HTML 5 Form Input Field</h1>
+        </header>
+        <div>
+            <label for="text">First Name</label>
+            <input type="text" id="text" name="text">
+            <error-output class="text-error" for = "text"></error-output>   
+        </div>
+        <div>
+            <label for="pwd">password</label>
+            <input type="password" id="pwd" name="pwd">
+        </div>
+        <div>
+            <label for="email" >E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="url">Url</label>
+            <input type="url" id="url" name="url">
+        </div>
+        <div>
+            <label for="number">First Name</label>
+            <input type="number" id="number" name="number">
+        </div>
+        <div>
+            <label for="tel">tel input</label>
+            <input type="tel" id="tel" name="tel">
+        </div>
+
+        <div>
+            <label for="search">search input</label>
+            <input type="search" id="search" name="search">
+        </div>
+
+        <div class="nativedateTimePicker">
+            <label for="party">Choose Date and Time</label>
+            <input type="datetime-local" id="party" name="b'day">
+            <span class="validity"></span>
+        </div>
+
+        <div>
+            <label for="salary">Salary Limit</label>
+            <input type="range" name="salary" id="salary" min = "300000" max = "500000" step = "100" value="350000">
+            <output class="salary-output" for ="salary">400000</output>
+        </div>
+        <div>
+            <button type="text" >Submit</button>
+        </div>
+    </form>
+    <script>
+            const name = document.querySelector("#text");
+            const error = document.querySelector(".text-error");
+            
+            name.addEventListener('input',  function(){
+                let regex = RegExp('^[a-z]{1}[a-z]{1,}$');
+                if(regex.test(name.value))
+                    text.textContent = "";
+                else
+                text.textContent = "the wrong entered charater";
+            });
+
+    </script>
+</body>
+</html>
